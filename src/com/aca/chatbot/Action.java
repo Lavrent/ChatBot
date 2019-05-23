@@ -1,9 +1,8 @@
 package com.aca.chatbot;
 
 import java.util.Scanner;
-
 public class Action {
-    public static void action() {
+    public static void start() {
         System.out.println("choose the action");
         Scanner input = new Scanner(System.in);
         String chatType = input.nextLine();
