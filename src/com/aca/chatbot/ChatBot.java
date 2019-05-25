@@ -9,9 +9,8 @@ import java.util.Scanner;
 public class ChatBot {
     public static void chat() {
         Scanner in = new Scanner(System.in);
-        String userInput = "";//= in.nextLine();
+        String userInput = in.nextLine();
         while (!isFinished(userInput)) {
-            userInput = in.nextLine();
             String chatBotAnswer;
 
             try (Repository<String, String> repository = new StringValueRepository<>("chat.txt")) {
@@ -29,7 +28,9 @@ public class ChatBot {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            userInput = in.nextLine();
         }
+        System.out.println("The End");
     }
 
     private static void playOrCalculate(String input) {
