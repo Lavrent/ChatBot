@@ -11,9 +11,6 @@ public class RepositoryFactory {
         if (keyClass.equals(Long.class)) {
             return (Repository<Key, Value>) new LongValueRepository<Value>(valueClass.getSimpleName());
         }
-        if (keyClass.equals(LocalDate.class)) {
-            return (Repository<Key, Value>) new DateValueRepository<Value>(valueClass.getSimpleName());
-        }
         if (keyClass.equals(Integer.class)) {
             return (Repository<Key, Value>) new StringableValueRepository<Integer, Value>(valueClass.getSimpleName(), new Stringable<Integer>() {
                 @Override

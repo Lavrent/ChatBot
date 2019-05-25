@@ -4,5 +4,6 @@ public enum ChatTypes {
     PLAY,
     CALCULATE,
     FINISH,
+    CHAT,
     OTHER
 }
